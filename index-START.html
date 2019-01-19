@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+
+    // Interpolated
+
+    // Styled
+    // console.log('%c I am a cool paragraph', 'font-weight: bold; color: pink; font-size: 30px; background-color: black')
+
+    // warning!
+    console.warn('This is a warning')
+
+    // Error :|
+    console.error('An ERROR')
+
+    // Info
+    console.info('Sharks aren\'t that dangerous')
+
+    // Testing
+
+    // clearing
+
+    // Viewing DOM Elements
+    const p = document.querySelector('p') 
+
+    console.log(p)
+    console.dir(p)
+
+    console.clear(); 
+    // Grouping together
+  
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`)
+      console.log(`this is ${dog.name}`)
+      console.log(`${dog.name} is ${dog.age} years old`)
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`)
+      console.groupEnd(`${dog.name}`)
+    })
+
+    // counting
+
+    console.count('old')
+    console.count('oldy')
+    console.count('old')
+    console.count('old')
+    console.count('oldy')
+    console.count('old')
+    console.count('oldy')
+    console.clear();
+    // timing
+
+
+  </script>
+</body>
+</html>
